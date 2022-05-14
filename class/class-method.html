@@ -5,20 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class Constructor</title>
+  <title>Class Method</title>
 </head>
 
 <body>
   <script>
     class Person {
       constructor(name) {
-        console.info(`Membuat Person ${name}`);
+        this.name = name;
+
+      }
+
+      sayHello(name) {
+        console.info(`Hi ${name}, My name is ${this.name}`);
       }
 
     }
 
     const anggi = new Person("anggi");
     console.info(anggi);
+    anggi.sayHello("adul");
   </script>
 </body>
 
